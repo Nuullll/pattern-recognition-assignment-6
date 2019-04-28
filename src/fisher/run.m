@@ -44,7 +44,7 @@ axis([-5 5 -5 5]);
 m1 = mean(w1);
 m2 = mean(w2);
 
-Sw = size(w1,1) * cov(w1,1) + size(w2,1) + cov(w2,1);
+Sw = size(w1,1) * cov(w1,1) + size(w2,1) * cov(w2,1);
 W = Sw \ (m1-m2)';
 W = W / norm(W);
 
@@ -70,7 +70,7 @@ t = [w2(:),w2p(:)]';
 plot(t(:,1:n2),t(:,n2+1:end),'b--');
 
 axis equal;
-legend('类别1','类别2','投影方向','类别1（降维）','类别2（降维）');
+legend('绫诲埆1','绫诲埆2','鎶曞奖鏂瑰悜','绫诲埆1锛堥檷缁达級','绫诲埆2锛堥檷缁达級');
 
 % boundary
 m1p = mean(w1p);
